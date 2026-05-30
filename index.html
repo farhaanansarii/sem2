@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>B.Sc. Zoology MCQ Bank 2026 – Ecology & Environmental Biology</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --green:#1D9E75;--dark:#085041;--light:#e1f5ee;--bg:#f0f7f4;
+  --card:#fff;--border:#d5ebe0;--text:#1a1a1a;--muted:#555;
+  --hot:#fff3cd;--hot-border:#f0c040;--hot-text:#7a5200;
+  --radius:12px;--shadow:0 2px 10px rgba(0,100,60,.09);
+}
+html{scroll-behavior:smooth}
+body{font-family:'Segoe UI',system-ui,Arial,sans-serif;background:var(--bg);color:var(--text);min-height:100vh;font-size:15px;line-height:1.5}
+
+/* ===== LAYOUT ===== */
+.container{max-width:880px;margin:0 auto;padding:1rem}
+@media(min-width:640px){.container{padding:1.5rem 1.25rem 3rem}}
+
+/* ===== HERO ===== */
+.hero{background:linear-gradient(135deg,#1D9E75 0%,#064535 100%);color:#fff;padding:1.5rem 1rem;border-radius:var(--radius);margin-bottom:1.25rem;text-align:center}
+.hero h1{font-size:clamp(16px,4.5vw,22px);font-weight:700;margin-bottom:6px;line-height:1.4}
+.hero p{font-size:clamp(11px,3vw,13px);opacity:.88}
+.badges{display:flex;flex-wrap:wrap;justify-content:center;gap:4px;margin-bottom:8px}
+.badge{background:rgba(255,255,255,.2);border-radius:20px;padding:3px 11px;font-size:11px}
+.hero-note{margin-top:10px;font-size:11px;background:rgba(255,255,255,.15);display:inline-block;padding:4px 14px;border-radius:20px}
+
+/* ===== STATS ===== */
+.stats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:1.25rem}
+@media(min-width:480px){.stats-grid{grid-template-columns:repeat(6,1fr)}}
+.stat{background:var(--card);border-radius:10px;padding:12px 6px;text-align:center;border:1px solid #d0e8df;box-shadow:var(--shadow)}
+.stat-num{font-size:clamp(18px,5vw,24px);font-weight:700;color:var(--green)}
+.stat-label{font-size:10px;color:#666;margin-top:2px}
+.score-box{background:var(--card);border:1px solid var(--green);border-radius:10px;padding:10px 16px;display:inline-flex;align-items:center;gap:8px;font-size:14px;color:var(--dark);font-weight:600;margin-bottom:1.25rem}
+.score-box span{font-size:20px;font-weight:700;color:var(--green)}
+
+/* ===== TABS ===== */
+.tabs-wrapper{margin-bottom:1.25rem}
+/* Mobile: dropdown */
+.tab-select{display:block;width:100%;padding:11px 14px;border-radius:8px;border:1.5px solid var(--green);font-size:14px;color:var(--dark);background:var(--card);font-weight:600;cursor:pointer;-webkit-appearance:none;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%231D9E75' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center;padding-right:36px}
+@media(min-width:620px){
+  .tab-select{display:none}
+  .tabs{display:flex;gap:6px;flex-wrap:wrap}
+  .tab{padding:9px 15px;border-radius:8px;border:1.5px solid #b5d8ca;background:var(--card);cursor:pointer;font-size:13px;color:var(--dark);font-weight:500;transition:all .15s;white-space:nowrap}
+  .tab.active{background:var(--green);color:#fff;border-color:var(--green)}
+  .tab:hover:not(.active){background:var(--light);border-color:var(--green)}
+}
+@media(max-width:619px){.tabs{display:none}}
+
+/* ===== SECTIONS ===== */
+.section{display:none}
+.section.active{display:block}
+.unit-header{display:flex;align-items:flex-start;gap:8px;margin-bottom:1rem;padding-bottom:10px;border-bottom:2px solid var(--light);flex-wrap:wrap}
+.unit-header h2{font-size:clamp(14px,4vw,17px);font-weight:600;color:var(--dark);flex:1;min-width:0}
+.unit-tag{background:var(--green);color:#fff;border-radius:20px;padding:4px 12px;font-size:12px;font-weight:600;white-space:nowrap;flex-shrink:0}
+
+/* ===== HOTBOX ===== */
+.hotbox{background:#fffbea;border:1px solid #f0c040;border-radius:10px;padding:12px 14px;margin-bottom:1.2rem}
+.hotbox h3{font-size:13px;font-weight:700;color:#7a5200;margin-bottom:7px}
+.hotbox ul{padding-left:18px;color:#5a3a00;line-height:1.9;font-size:13px}
+
+/* ===== Q CARDS ===== */
+.q-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:1rem;margin-bottom:1rem;transition:box-shadow .2s}
+.q-card:hover{box-shadow:var(--shadow)}
+.q-header{display:flex;align-items:flex-start;gap:9px;margin-bottom:12px}
+.q-num{border-radius:6px;padding:3px 9px;font-size:12px;font-weight:700;flex-shrink:0;margin-top:1px;white-space:nowrap}
+.q-num.normal{background:var(--light);color:#0F6E56}
+.q-num.hot{background:var(--hot);color:var(--hot-text);border:1px solid var(--hot-border)}
+.q-text{font-size:clamp(13px,3.5vw,14px);line-height:1.65;flex:1;font-weight:500;min-width:0;word-break:break-word}
+
+/* ===== OPTIONS ===== */
+.options{display:grid;grid-template-columns:1fr;gap:7px;margin-bottom:10px}
+@media(min-width:520px){.options{grid-template-columns:1fr 1fr}}
+.opt{padding:10px 12px;border-radius:8px;border:1.5px solid var(--border);font-size:clamp(12px,3vw,13px);cursor:pointer;transition:all .15s;background:#f8fffe;line-height:1.45;min-height:44px;display:flex;align-items:center;-webkit-tap-highlight-color:transparent}
+.opt:active{transform:scale(.98)}
+.opt:hover{border-color:var(--green);background:var(--light)}
+.opt.correct{background:#d4edda;border-color:#28a745;color:#145222;font-weight:600}
+.opt.wrong{background:#fde;border-color:#dc3545;color:#721c24}
+.opt.disabled{pointer-events:none}
+.answer-reveal{font-size:13px;padding:9px 13px;border-radius:8px;background:var(--light);color:var(--dark);display:none;margin-top:6px;border-left:3px solid var(--green);font-weight:500;word-break:break-word}
+.show-ans-btn{font-size:12px;color:var(--green);background:none;border:none;cursor:pointer;padding:6px 0 0;text-decoration:underline;font-weight:500;min-height:32px;-webkit-tap-highlight-color:transparent}
+.show-ans-btn:hover{color:var(--dark)}
+
+/* ===== ASSERTION-REASON ===== */
+.ar-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:1rem;margin-bottom:1rem}
+.ar-label{font-size:11px;font-weight:700;color:#0F6E56;background:var(--light);padding:3px 9px;border-radius:4px;margin-bottom:8px;display:inline-block}
+.ar-statement{font-size:clamp(12px,3.2vw,13px);margin:8px 0;line-height:1.7;background:#f8fffe;padding:10px;border-radius:6px;white-space:pre-line;border:1px solid #e0f0ea;word-break:break-word}
+.ar-options{display:grid;grid-template-columns:1fr;gap:7px;margin-bottom:10px}
+
+/* ===== MATCH ===== */
+.match-table{width:100%;border-collapse:collapse;font-size:clamp(11px,2.8vw,13px);margin:10px 0}
+.match-table td,.match-table th{padding:8px 10px;border:1px solid var(--border);vertical-align:top;line-height:1.4;word-break:break-word}
+.match-table th{background:var(--light);font-weight:600;font-size:12px;color:var(--dark)}
+.match-table tr:nth-child(even) td{background:#f8fffe}
+
+/* ===== REVISION ===== */
+.revision-item{padding:9px 14px;border-left:3px solid var(--green);background:var(--card);border-radius:0 8px 8px 0;margin-bottom:7px;font-size:clamp(12px,3.2vw,13px);line-height:1.6;border:1px solid var(--border);border-left:3px solid var(--green);word-break:break-word}
+.expected-q{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:1rem;margin-bottom:8px;font-size:clamp(13px,3.5vw,14px);line-height:1.6;border-left:4px solid var(--green)}
+.section-divider{margin:2rem 0 1rem;border-top:2px solid var(--light);padding-top:1.2rem}
+
+/* ===== FOOTER ===== */
+footer{text-align:center;padding:1.5rem 1rem;font-size:12px;color:#777;border-top:1px solid var(--border);margin-top:2rem;background:var(--card);border-radius:var(--radius)}
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="hero">
+  <div class="badges">
+    <span class="badge">B.Sc. II Semester</span>
+    <span class="badge">Zoology</span>
+    <span class="badge">2026 Exam Ready</span>
+  </div>
+  <h1>🌿 Ecology &amp; Environmental Biology<br>MCQ Question Bank 2026</h1>
+  <p>100 Important MCQs &bull; 4 Units &bull; Hindi + English &bull; Assertion-Reason &bull; Match-the-Following</p>
+  <div class="hero-note">⭐⭐⭐ = Most Probable 2026 Questions</div>
+</div>
+
+<div class="stats-grid">
+  <div class="stat"><div class="stat-num">100</div><div class="stat-label">Total MCQs</div></div>
+  <div class="stat"><div class="stat-num">4</div><div class="stat-label">Units</div></div>
+  <div class="stat"><div class="stat-num">20</div><div class="stat-label">A-R Qs</div></div>
+  <div class="stat"><div class="stat-num">20</div><div class="stat-label">Match Sets</div></div>
+  <div class="stat"><div class="stat-num">50</div><div class="stat-label">Revision</div></div>
+  <div class="stat"><div class="stat-num" id="score-display">0/0</div><div class="stat-label">Score</div></div>
+</div>
+
+<div class="score-box">Score: <span id="score-num">0</span> / <span id="total-num">0</span> correct</div>
+
+<div class="tabs-wrapper">
+  <select class="tab-select" onchange="showTab(this.value)">
+    <option value="unit1">Unit I – Ecosystem</option>
+    <option value="unit2">Unit II – Ecology</option>
+    <option value="unit3">Unit III – Pollution</option>
+    <option value="unit4">Unit IV – Environment</option>
+    <option value="special">A-R &amp; Match</option>
+    <option value="revision">Revision + Expected</option>
+  </select>
+  <div class="tabs">
+    <button class="tab active" onclick="showTabBtn('unit1',this)">Unit I – Ecosystem</button>
+    <button class="tab" onclick="showTabBtn('unit2',this)">Unit II – Ecology</button>
+    <button class="tab" onclick="showTabBtn('unit3',this)">Unit III – Pollution</button>
+    <button class="tab" onclick="showTabBtn('unit4',this)">Unit IV – Environment</button>
+    <button class="tab" onclick="showTabBtn('special',this)">A-R &amp; Match</button>
+    <button class="tab" onclick="showTabBtn('revision',this)">Revision + Expected</button>
+  </div>
+</div>
+
+<div id="unit1" class="section active">
+  <div class="unit-header"><span class="unit-tag">Unit I</span><h2>Concepts of Ecosystem (Q1–Q25)</h2></div>
+  <div class="hotbox"><h3>🔥 Top Sure-Shot Topics – Unit I</h3>
+    <ul>
+      <li>Definition of Ecology – Ernst Haeckel (1866)</li>
+      <li>Tansley coined 'Ecosystem' (1935)</li>
+      <li>Lindeman's 10% Energy Law</li>
+      <li>Food chain types – Grazing vs Detritus</li>
+      <li>Biogeochemical cycles – Carbon, Nitrogen, Phosphorus</li>
+      <li>Population growth – J-curve vs S-curve (Logistic equation)</li>
+      <li>Ecological pyramids – Energy always upright</li>
+      <li>NPP = GPP – Respiration</li>
+    </ul>
+  </div>
+  <div id="unit1-questions"></div>
+</div>
+
+<div id="unit2" class="section">
+  <div class="unit-header"><span class="unit-tag">Unit II</span><h2>Ecological Features (Q26–Q50)</h2></div>
+  <div class="hotbox"><h3>🔥 Top Sure-Shot Topics – Unit II</h3>
+    <ul>
+      <li>Inter-specific interactions – Mutualism, Commensalism, Parasitism, Amensalism</li>
+      <li>Pioneer &amp; Climax community in succession</li>
+      <li>Fundamental vs Realized Niche (Hutchinson)</li>
+      <li>r vs K strategies (MacArthur &amp; Wilson)</li>
+      <li>Gause's Competitive Exclusion Principle</li>
+      <li>Adaptations – Fossorial (Mole), Cursorial (Cheetah), Volant (Bat), Arboreal (Monkey)</li>
+    </ul>
+  </div>
+  <div id="unit2-questions"></div>
+</div>
+
+<div id="unit3" class="section">
+  <div class="unit-header"><span class="unit-tag">Unit III</span><h2>Environmental Pollution (Q51–Q75)</h2></div>
+  <div class="hotbox"><h3>🔥 Top Sure-Shot Topics – Unit III</h3>
+    <ul>
+      <li>Greenhouse gases – CO₂, CH₄, N₂O, CFCs</li>
+      <li>Ozone depletion – Dobson unit, Montreal Protocol (1987)</li>
+      <li>Acid rain – pH &lt; 5.6, SO₂ + NOx → H₂SO₄ + HNO₃</li>
+      <li>BOD &amp; COD – water pollution indicators</li>
+      <li>Minamata disease (Mercury), Itai-Itai (Cadmium), Bhopal (MIC)</li>
+      <li>Biomagnification – DDT in food chain</li>
+      <li>Ecological footprint &amp; Carbon footprint</li>
+    </ul>
+  </div>
+  <div id="unit3-questions"></div>
+</div>
+
+<div id="unit4" class="section">
+  <div class="unit-header"><span class="unit-tag">Unit IV</span><h2>Environmental Management (Q76–Q100)</h2></div>
+  <div class="hotbox"><h3>🔥 Top Sure-Shot Topics – Unit IV</h3>
+    <ul>
+      <li>Environment Protection Act 1986 – India's umbrella legislation</li>
+      <li>National Green Tribunal (NGT) Act 2010 – Retired SC judge chairs</li>
+      <li>UNEP – Founded 1972, Stockholm Conference, HQ: Nairobi</li>
+      <li>Kyoto Protocol (1997), Paris Agreement (2015), Rio Summit (1992)</li>
+      <li>Sanitary Landfill – compacted &amp; layered burial</li>
+      <li>Incineration (high temp burning), Composting (aerobic), Pyrolysis (no oxygen)</li>
+      <li>3R – Reduce, Reuse, Recycle</li>
+    </ul>
+  </div>
+  <div id="unit4-questions"></div>
+</div>
+
+<div id="special" class="section">
+  <div class="unit-header"><span class="unit-tag">Special</span><h2>Assertion-Reason MCQs (20 Questions)</h2></div>
+  <div id="ar-questions"></div>
+  <div class="section-divider">
+    <div class="unit-header"><span class="unit-tag">Match</span><h2>Match the Following (20 Sets)</h2></div>
+    <div id="match-questions"></div>
+  </div>
+</div>
+
+<div id="revision" class="section">
+  <div class="unit-header"><span class="unit-tag">Revision</span><h2>50 Super Important One-Liners</h2></div>
+  <div id="revision-points"></div>
+  <div class="section-divider">
+    <div class="unit-header"><span class="unit-tag">⭐⭐⭐</span><h2>25 Expected Exam Questions 2026</h2></div>
+    <div id="expected-qs"></div>
+  </div>
+</div>
+
+<footer>B.Sc. II Semester Zoology MCQ Bank 2026 &bull; Ecology &amp; Environmental Biology &bull; All Rights Reserved</footer>
+</div>
+
+<script>
+var scoreCorrect=0,scoreTotal=0,answered={};
+
+var u1=[
+  {q:"⭐⭐⭐ Ecology शब्द किसने और कब दिया? (Who coined 'Ecology' and when?)",opts:["A. Darwin, 1859","B. Ernst Haeckel, 1866","C. Odum, 1953","D. Tansley, 1935"],ans:1,hot:true},
+  {q:"⭐⭐⭐ 'Ecosystem' शब्द किसने दिया? (Who coined 'Ecosystem'?)",opts:["A. Haeckel","B. Odum","C. A.G. Tansley","D. Clements"],ans:2,hot:true},
+  {q:"⭐⭐⭐ Lindeman का 10% Energy Law क्या बताता है?",opts:["A. 10% energy stored, 90% lost","B. 90% energy stored, 10% lost","C. Equal energy transfer","D. 50% transfer at each level"],ans:0,hot:true},
+  {q:"⭐⭐⭐ NPP (Net Primary Productivity) का सही formula है—",opts:["A. NPP = GPP + R","B. NPP = GPP – R","C. NPP = GPP × R","D. NPP = R – GPP"],ans:1,hot:true},
+  {q:"Grazing food chain की शुरुआत होती है— (Grazing food chain begins from—)",opts:["A. Decomposers","B. Herbivores","C. Green Plants (Producers)","D. Carnivores"],ans:2,hot:false},
+  {q:"Detritus food chain की शुरुआत होती है— (Detritus food chain starts from—)",opts:["A. Living green plants","B. Dead organic matter","C. Primary consumers","D. Apex predators"],ans:1,hot:false},
+  {q:"⭐⭐⭐ Pyramid of energy हमेशा होता है— (Pyramid of energy is always—)",opts:["A. Inverted","B. Upright","C. Spindle shaped","D. Variable"],ans:1,hot:true},
+  {q:"Pyramid of biomass freshwater में होता है— (Pyramid of biomass in freshwater is—)",opts:["A. Always upright","B. Inverted (phytoplankton low biomass)","C. Spindle shaped","D. Absent"],ans:1,hot:false},
+  {q:"⭐⭐⭐ J-shaped (exponential) growth curve किस condition में होती है?",opts:["A. Limited food supply","B. No competition, unlimited resources","C. High predation","D. Overcrowding"],ans:1,hot:true},
+  {q:"⭐⭐⭐ Logistic growth equation है— (Logistic growth equation is—)",opts:["A. dN/dt = rN","B. dN/dt = rN(K–N/K)","C. dN/dt = rN + K","D. dN/dt = K/rN"],ans:1,hot:true},
+  {q:"⭐⭐⭐ Carrying capacity को किस letter से दर्शाते हैं?",opts:["A. r","B. N","C. K","D. t"],ans:2,hot:true},
+  {q:"Carbon cycle में सबसे बड़ा carbon reservoir है— (Largest carbon reservoir—)",opts:["A. Atmosphere","B. Forests","C. Oceans","D. Soil"],ans:2,hot:false},
+  {q:"⭐⭐⭐ Nitrogen fixation करने वाला bacteria है— (Nitrogen-fixing bacteria—)",opts:["A. E. coli","B. Rhizobium","C. Salmonella","D. Clostridium (only)"],ans:1,hot:true},
+  {q:"Denitrification किया जाता है— (Denitrification is done by—)",opts:["A. Nitrosomonas","B. Azotobacter","C. Pseudomonas","D. Rhizobium"],ans:2,hot:false},
+  {q:"Phosphorus cycle में मुख्य source है— (Main source in phosphorus cycle—)",opts:["A. Atmosphere","B. Rocks and minerals","C. Water bodies","D. Living organisms"],ans:1,hot:false},
+  {q:"Ecological pyramid की अवधारणा किसने दी? (Who gave ecological pyramid concept?)",opts:["A. Tansley","B. Charles Elton","C. Odum","D. Lindeman"],ans:1,hot:false},
+  {q:"⭐⭐⭐ Food web किसका जाल है? (Food web is a network of—)",opts:["A. Nutrients","B. Organisms only","C. Interconnected food chains","D. Trophic levels"],ans:2,hot:true},
+  {q:"Trophic level 3 पर कौन होता है? (Organism at trophic level 3—)",opts:["A. Producer","B. Primary consumer","C. Secondary consumer","D. Decomposer"],ans:2,hot:false},
+  {q:"Lotic ecosystem का उदाहरण है— (Example of lotic ecosystem—)",opts:["A. Lake","B. Pond","C. River","D. Swamp"],ans:2,hot:false},
+  {q:"Lentic ecosystem का उदाहरण है— (Example of lentic ecosystem—)",opts:["A. Stream","B. River","C. Ocean current","D. Pond / Lake"],ans:3,hot:false},
+  {q:"⭐⭐⭐ Natality का अर्थ है— (Natality means—)",opts:["A. Death rate","B. Birth rate","C. Migration rate","D. Population density"],ans:1,hot:true},
+  {q:"Eutrophication का कारण है— (Eutrophication is caused by—)",opts:["A. Oil spills","B. Excess N & P in water","C. Heavy metals","D. Radioactive waste"],ans:1,hot:false},
+  {q:"Primary producer को क्या कहते हैं? (Primary producers are—)",opts:["A. Heterotrophs","B. Decomposers","C. Autotrophs","D. Consumers"],ans:2,hot:false},
+  {q:"⭐⭐⭐ Biosphere reserve का उद्देश्य है— (Biosphere reserve aims at—)",opts:["A. Mining","B. Conservation of biodiversity","C. Industrial use","D. Agricultural expansion"],ans:1,hot:true},
+  {q:"Decomposers को क्या कहते हैं? (Decomposers are also called—)",opts:["A. Producers","B. Autotrophs","C. Saprotrophs / Reducers","D. Herbivores"],ans:2,hot:false}
+];
+
+var u2=[
+  {q:"⭐⭐⭐ Mutualism का उदाहरण है— (Example of mutualism—)",opts:["A. Tapeworm in gut","B. Lichens (algae + fungi)","C. Remora fish on shark","D. Cuckoo bird"],ans:1,hot:true},
+  {q:"⭐⭐⭐ Commensalism में होता है— (In commensalism—)",opts:["A. Both benefit (+/+)","B. One benefits, other harmed (+/-)","C. One benefits, other unaffected (+/0)","D. Both neutral (0/0)"],ans:2,hot:true},
+  {q:"⭐⭐⭐ Parasitism में होता है— (In parasitism—)",opts:["A. Both benefit","B. One benefits, other is harmed","C. Both harmed","D. One neutral, other harmed"],ans:1,hot:true},
+  {q:"Amensalism में होता है— (In amensalism—)",opts:["A. +/+","B. +/-","C. 0/- (one harmed, other neutral)","D. -/-"],ans:2,hot:false},
+  {q:"⭐⭐⭐ Ecological succession में सबसे पहला organism है— (First organism in succession—)",opts:["A. Climax species","B. Pioneer species","C. Dominant species","D. Keystone species"],ans:1,hot:true},
+  {q:"⭐⭐⭐ Climax community की विशेषता है— (Climax community is—)",opts:["A. Unstable and changing","B. Stable, self-perpetuating, high diversity","C. Pioneer species dominant","D. Short-lived"],ans:1,hot:true},
+  {q:"Primary succession कहाँ होती है? (Primary succession occurs on—)",opts:["A. Previously vegetated area","B. Disturbed forest","C. Bare rock / newly formed land","D. Flooded farmland"],ans:2,hot:false},
+  {q:"⭐⭐⭐ Secondary succession में क्या पहले से मौजूद होता है?",opts:["A. Climax community","B. Pioneer species only","C. Soil with propagules/seeds","D. Nothing at all"],ans:2,hot:true},
+  {q:"Hydrosere succession शुरू होती है— (Hydrosere begins in—)",opts:["A. Bare rock","B. Open water / aquatic habitat","C. Desert sand","D. Burned forest"],ans:1,hot:false},
+  {q:"⭐⭐⭐ Ecological niche की concept किसने दी? (Niche concept was given by—)",opts:["A. Darwin only","B. Grinnell, Elton, Hutchinson (all contributed)","C. Tansley","D. Odum"],ans:1,hot:true},
+  {q:"⭐⭐⭐ Fundamental niche vs Realized niche — Realized niche है—",opts:["A. Theoretical maximum niche","B. Actual niche occupied due to competition","C. Broadest possible niche","D. Same as habitat"],ans:1,hot:true},
+  {q:"⭐⭐⭐ Competitive Exclusion Principle किसने दिया? (Given by—)",opts:["A. Darwin","B. Gause","C. Lotka","D. Elton"],ans:1,hot:true},
+  {q:"⭐⭐⭐ r-strategists की विशेषता है— (r-strategists are characterized by—)",opts:["A. Large body, long life, low birth rate","B. Small body, high birth rate, short lifespan","C. High parental care","D. Stable environment preferred"],ans:1,hot:true},
+  {q:"⭐⭐⭐ K-strategists का उदाहरण है— (K-strategist example—)",opts:["A. Insects","B. Bacteria","C. Weeds","D. Elephants and whales"],ans:3,hot:true},
+  {q:"r और K selection concept किसने दिया? (r and K selection was given by—)",opts:["A. Darwin & Wallace","B. MacArthur & Wilson","C. Lotka & Volterra","D. Odum & Tansley"],ans:1,hot:false},
+  {q:"⭐⭐⭐ Volant adaptation किससे संबंधित है? (Volant adaptation relates to—)",opts:["A. Swimming","B. Burrowing","C. Running","D. Flying"],ans:3,hot:true},
+  {q:"⭐⭐⭐ Fossorial adaptation का उदाहरण है— (Fossorial adaptation example—)",opts:["A. Duck","B. Mole","C. Monkey","D. Cheetah"],ans:1,hot:true},
+  {q:"Cursorial adaptation किसमें पाई जाती है? (Cursorial adaptation in—)",opts:["A. Fish","B. Mole","C. Bat","D. Cheetah"],ans:3,hot:false},
+  {q:"Arboreal adaptation है— (Arboreal adaptation is for—)",opts:["A. Life underground","B. Life in water","C. Life on trees","D. Life in desert"],ans:2,hot:false},
+  {q:"⭐⭐⭐ Desert adaptation में animals क्या करते हैं?",opts:["A. Lose water rapidly","B. Are diurnal","C. Conserve water, nocturnal habits","D. Need large water bodies"],ans:2,hot:true},
+  {q:"Aquatic adaptation में कौन सा feature होता है? (Aquatic adaptation feature—)",opts:["A. Strong legs for running","B. Streamlined body, fins/flippers","C. Thick fur","D. Large external ears"],ans:1,hot:false},
+  {q:"Lotka-Volterra equations किससे संबंधित हैं? (Lotka-Volterra equations are for—)",opts:["A. Nutrient cycles","B. Predator-prey dynamics","C. Ecosystem productivity","D. Population genetics"],ans:1,hot:false},
+  {q:"Mycorrhiza किस प्रकार का association है? (Mycorrhiza is an example of—)",opts:["A. Parasitism","B. Amensalism","C. Mutualism","D. Commensalism"],ans:2,hot:false},
+  {q:"Epiphytes किस interaction का उदाहरण हैं? (Epiphytes are example of—)",opts:["A. Parasitism","B. Mutualism","C. Commensalism","D. Predation"],ans:2,hot:false},
+  {q:"⭐⭐⭐ Niche और Habitat में क्या अंतर है?",opts:["A. Niche = physical space, Habitat = role","B. Niche = role + function in ecosystem, Habitat = physical address","C. Both are the same","D. Habitat = functional role"],ans:1,hot:true}
+];
+
+var u3=[
+  {q:"⭐⭐⭐ सबसे महत्वपूर्ण Greenhouse gas है— (Most important greenhouse gas—)",opts:["A. Oxygen","B. Carbon Dioxide (CO₂)","C. Nitrogen","D. Argon"],ans:1,hot:true},
+  {q:"⭐⭐⭐ Ozone layer किस atmospheric layer में है?",opts:["A. Troposphere","B. Mesosphere","C. Stratosphere (15–35 km)","D. Thermosphere"],ans:2,hot:true},
+  {q:"⭐⭐⭐ Ozone hole सबसे पहले कहाँ देखा गया? (Ozone hole first observed—)",opts:["A. Arctic","B. Amazon","C. Antarctica","D. Himalayas"],ans:2,hot:true},
+  {q:"⭐⭐⭐ Acid rain का pH होता है— (Acid rain pH—)",opts:["A. Less than 7","B. Less than 6","C. Less than 5.6","D. Less than 4"],ans:2,hot:true},
+  {q:"⭐⭐⭐ Acid rain का मुख्य कारण है— (Main cause of acid rain—)",opts:["A. CO₂ + H₂O","B. SO₂ + NOx → H₂SO₄ + HNO₃","C. CFCs alone","D. CH₄"],ans:1,hot:true},
+  {q:"⭐⭐⭐ Minamata disease किस metal से होती है? (Minamata disease caused by—)",opts:["A. Lead","B. Cadmium","C. Mercury (Hg)","D. Arsenic"],ans:2,hot:true},
+  {q:"⭐⭐⭐ Itai-Itai disease किससे होती है? (Itai-Itai caused by—)",opts:["A. Mercury","B. Cadmium (Cd)","C. Lead","D. Fluoride"],ans:1,hot:true},
+  {q:"⭐⭐⭐ Bhopal Gas Tragedy (1984) में कौन सी gas leak हुई?",opts:["A. Chlorine","B. Sulfur dioxide","C. Methyl Isocyanate (MIC)","D. Ammonia"],ans:2,hot:true},
+  {q:"CFCs (Chlorofluorocarbons) किसको नष्ट करते हैं? (CFCs destroy—)",opts:["A. Oxygen layer","B. Ozone (O₃) layer","C. Nitrogen layer","D. Water vapor layer"],ans:1,hot:false},
+  {q:"⭐⭐⭐ Montreal Protocol (1987) किससे संबंधित है?",opts:["A. Greenhouse gases","B. Acid rain","C. Ozone layer protection (CFCs ban)","D. Water pollution"],ans:2,hot:true},
+  {q:"BOD का full form है—",opts:["A. Biological Oxygen Demand","B. Biochemical Oxygen Demand","C. Both A & B are used","D. Basic Oxygen Demand"],ans:2,hot:false},
+  {q:"⭐⭐⭐ Biomagnification का अर्थ है—",opts:["A. Dilution of toxins at higher levels","B. Concentration of toxins increases at higher trophic levels","C. Breakdown of toxins","D. Toxins stay constant"],ans:1,hot:true},
+  {q:"DDT किस प्रकार का pollutant है? (DDT is—)",opts:["A. Biodegradable","B. Natural pollutant","C. Radioactive","D. Non-biodegradable, persistent, fat-soluble"],ans:3,hot:false},
+  {q:"⭐⭐⭐ Noise pollution की safe limit (WHO) है—",opts:["A. 45 dB","B. 65 dB","C. 85 dB","D. 120 dB"],ans:0,hot:true},
+  {q:"Photochemical smog में होता है— (Photochemical smog contains—)",opts:["A. SO₂ mainly","B. CO only","C. Ozone + PAN (Peroxy Acetyl Nitrate)","D. Water vapor"],ans:2,hot:false},
+  {q:"⭐⭐⭐ Radiation pollution में सबसे खतरनाक radiation कौन सी है?",opts:["A. Alpha","B. Beta","C. Infrared","D. Gamma"],ans:3,hot:true},
+  {q:"⭐⭐⭐ Ecological footprint measure करता है—",opts:["A. Carbon emissions only","B. Land area for food production only","C. Natural resources consumed vs regenerative capacity","D. Water usage only"],ans:2,hot:true},
+  {q:"Carbon footprint का अर्थ है— (Carbon footprint means—)",opts:["A. Soil carbon content","B. Total CO₂ equivalent emissions by entity","C. Forest carbon storage","D. Oceanic carbon"],ans:1,hot:false},
+  {q:"Eutrophication का परिणाम है— (Result of eutrophication—)",opts:["A. Increase in fish diversity","B. Algal bloom → O₂ depletion → fish kill","C. Increase in water clarity","D. Decrease in algae"],ans:1,hot:false},
+  {q:"Light pollution का मुख्य प्रभाव है— (Light pollution mainly affects—)",opts:["A. Soil composition","B. Nocturnal animals, bird migration patterns","C. Water pH","D. Rock weathering"],ans:1,hot:false},
+  {q:"⭐⭐⭐ Greenhouse effect का सीधा परिणाम है—",opts:["A. Cooling of Earth","B. Global warming","C. Ozone increase","D. Decreased rainfall"],ans:1,hot:true},
+  {q:"E-waste में कौन से harmful metals होते हैं? (E-waste harmful metals—)",opts:["A. Iron and calcium","B. Lead (Pb) and Mercury (Hg)","C. Magnesium and zinc","D. Sodium and potassium"],ans:1,hot:false},
+  {q:"Soil pollution का मुख्य कारण है— (Main cause of soil pollution—)",opts:["A. Excessive rain","B. Natural erosion only","C. Pesticides, fertilizers, industrial waste","D. Forest cover"],ans:2,hot:false},
+  {q:"Dobson unit किसे measure करती है? (Dobson unit measures—)",opts:["A. Air pollution","B. Ozone layer thickness","C. Water quality","D. Noise levels"],ans:1,hot:false},
+  {q:"⭐⭐⭐ WHO के अनुसार drinking water में safe TDS है—",opts:["A. < 100 mg/L","B. < 500 mg/L","C. < 1000 mg/L","D. < 2000 mg/L"],ans:1,hot:true}
+];
+
+var u4=[
+  {q:"⭐⭐⭐ Environment Protection Act कब लागू हुआ? (EPA enacted in—)",opts:["A. 1972","B. 1980","C. 1986","D. 1992"],ans:2,hot:true},
+  {q:"⭐⭐⭐ National Green Tribunal (NGT) Act कब पास हुआ?",opts:["A. 2005","B. 2008","C. 2010","D. 2012"],ans:2,hot:true},
+  {q:"UNEP का full form है—",opts:["A. United Nations Environmental Project","B. United Nations Environment Programme","C. Universal Nature & Earth Protection","D. United Nations Ecology Programme"],ans:1,hot:false},
+  {q:"⭐⭐⭐ UNEP की स्थापना कब हुई? (UNEP established in—)",opts:["A. 1962","B. 1968","C. 1972 (Stockholm Conference)","D. 1980"],ans:2,hot:true},
+  {q:"UNEP का headquarters कहाँ है? (UNEP HQ is located at—)",opts:["A. Geneva","B. New York","C. Paris","D. Nairobi, Kenya"],ans:3,hot:false},
+  {q:"⭐⭐⭐ Kyoto Protocol (1997) किससे संबंधित है?",opts:["A. Ozone layer protection","B. Biodiversity conservation","C. Greenhouse gas emissions reduction","D. Hazardous waste"],ans:2,hot:true},
+  {q:"⭐⭐⭐ Paris Agreement कब हुआ और लक्ष्य क्या था?",opts:["A. 2010, limit warming to 3°C","B. 2012, reduce CO₂ only","C. 2015, limit warming to 1.5–2°C","D. 2018, carbon tax"],ans:2,hot:true},
+  {q:"⭐⭐⭐ Rio Earth Summit कब हुआ? (Rio Earth Summit held in—)",opts:["A. 1987","B. 1990","C. 1992","D. 1995"],ans:2,hot:true},
+  {q:"Agenda 21 किससे संबंधित है? (Agenda 21 is related to—)",opts:["A. Ozone protection","B. Nuclear testing ban","C. Sustainable development action plan","D. Trade agreements"],ans:2,hot:false},
+  {q:"Convention on Biological Diversity (CBD) कब sign हुई?",opts:["A. 1987","B. 1992 (Rio Summit)","C. 1997","D. 2000"],ans:1,hot:false},
+  {q:"⭐⭐⭐ Sanitary landfill में waste को— (In sanitary landfill—)",opts:["A. Burned openly","B. Dumped in river","C. Compacted and covered with soil layers, lined base","D. Left open in fields"],ans:2,hot:true},
+  {q:"⭐⭐⭐ Incineration में waste— (Incineration involves—)",opts:["A. Buried underground","B. Biologically decomposed","C. Burned at high temperature (900–1200°C)","D. Frozen"],ans:2,hot:true},
+  {q:"⭐⭐⭐ Composting है— (Composting is—)",opts:["A. Burning organic waste","B. Aerobic biological decomposition of organic waste into humus","C. Chemical treatment of waste","D. Anaerobic burning"],ans:1,hot:true},
+  {q:"⭐⭐⭐ Pyrolysis में क्या होता है? (Pyrolysis is—)",opts:["A. Burning in presence of O₂","B. Composting with bacteria","C. Thermal decomposition WITHOUT oxygen → fuel gas, oil, char","D. Sanitary landfilling"],ans:2,hot:true},
+  {q:"⭐⭐⭐ NGT का Chairperson कौन होता है?",opts:["A. Prime Minister","B. Chief Justice of India","C. Environment Minister","D. Retired Supreme Court Judge"],ans:3,hot:true},
+  {q:"⭐⭐⭐ 3R का full form है—",opts:["A. Reduce, Reuse, Recycle","B. Remove, Replace, Renew","C. Refuse, React, Renew","D. Repair, Renew, Recycle"],ans:0,hot:true},
+  {q:"Water (Prevention & Control of Pollution) Act कब लागू हुआ?",opts:["A. 1972","B. 1974","C. 1980","D. 1986"],ans:1,hot:false},
+  {q:"CPCB का full form है—",opts:["A. Central Pollution Control Board","B. Central Protection Conservation Bureau","C. Chemical Pollution Control Body","D. Central Plant Conservation Board"],ans:0,hot:false},
+  {q:"⭐⭐⭐ Ramsar Convention किससे संबंधित है? (Ramsar Convention—)",opts:["A. Forest conservation","B. Wetlands conservation (1971)","C. Marine pollution","D. Desertification"],ans:1,hot:true},
+  {q:"CITES किससे संबंधित है? (CITES deals with—)",opts:["A. Climate change","B. Chemical weapons","C. Air pollution","D. Trade in endangered species (1973)"],ans:3,hot:false},
+  {q:"⭐⭐⭐ Brundtland Report 'Our Common Future' (1987) किसके बारे में था?",opts:["A. Nuclear energy","B. Ozone layer","C. Marine biodiversity","D. Sustainable development definition"],ans:3,hot:true},
+  {q:"EIA (Environmental Impact Assessment) क्या है?",opts:["A. Energy calculation method","B. Ecological index","C. Assessment of environmental effects of proposed projects","D. Economic survey"],ans:2,hot:false},
+  {q:"⭐⭐⭐ India में biodiversity hotspot है— (India's biodiversity hotspot—)",opts:["A. Thar Desert","B. Indo-Gangetic Plains","C. Deccan Plateau","D. Western Ghats & Eastern Himalayas"],ans:3,hot:true},
+  {q:"Environmental monitoring का उद्देश्य है— (Environmental monitoring purpose—)",opts:["A. Wildlife census only","B. Rainfall measurement","C. Assessment and tracking of environmental quality over time","D. Soil testing for crops"],ans:2,hot:false},
+  {q:"Stockholm Conference (1972) का विषय था—",opts:["A. Climate Change","B. Ozone Protection","C. Human Environment","D. Biodiversity"],ans:2,hot:false}
+];
+
+var arData=[
+  {a:"⭐⭐⭐\nAssertion (A): Food chain में energy successive trophic levels पर कम होती जाती है।\nReason (R): प्रत्येक trophic level पर 90% energy श्वसन (respiration) में नष्ट होती है।",opts:["A) A सही, R सही, R सही कारण है A का","B) A सही, R गलत","C) A गलत, R सही","D) A गलत, R गलत"],ans:0,hot:true},
+  {a:"⭐⭐⭐\nAssertion (A): Ozone layer UV radiation को absorb करती है।\nReason (R): CFCs ozone को नष्ट करते हैं, इसलिए UV radiation बढ़ती है।",opts:["A) A सही, R सही लेकिन R, A का कारण नहीं","B) A सही, R सही और R, A का कारण है","C) A सही, R गलत","D) A गलत, R सही"],ans:0,hot:true},
+  {a:"⭐⭐⭐\nAssertion (A): Pyramid of biomass freshwater ecosystem में inverted होता है।\nReason (R): Phytoplankton की turnover rate बहुत अधिक होती है।",opts:["A) A गलत, R गलत","B) A सही, R सही, R explains A","C) A सही, R गलत","D) A गलत, R सही"],ans:1,hot:true},
+  {a:"⭐⭐⭐\nAssertion (A): Acid rain का pH 5.6 से कम होता है।\nReason (R): SO₂ और NOx वायुमंडल में H₂SO₄ और HNO₃ बनाते हैं।",opts:["A) A सही, R सही, R सही कारण है","B) A सही, R गलत","C) A गलत, R सही","D) Both गलत"],ans:0,hot:true},
+  {a:"⭐⭐⭐\nAssertion (A): Realized niche हमेशा fundamental niche से छोटा होता है।\nReason (R): Inter-specific competition niche की range को limit करती है।",opts:["A) A गलत, R सही","B) A सही, R गलत","C) A सही, R सही, R explains A","D) Both गलत"],ans:2,hot:true},
+  {a:"Assertion (A): r-strategists में parental care बहुत अधिक होती है।\nReason (R): r-strategists high birth rate produce करते हैं।",opts:["A) A सही, R सही","B) A गलत, R सही (A incorrect – low parental care)","C) A सही, R गलत","D) Both गलत"],ans:1,hot:false},
+  {a:"⭐⭐⭐\nAssertion (A): Lichens pollution indicator के रूप में उपयोग किए जाते हैं।\nReason (R): Lichens SO₂ के प्रति अत्यंत sensitive होते हैं।",opts:["A) A सही, R सही, R explains A","B) A गलत, R सही","C) A सही, R गलत","D) Both गलत"],ans:0,hot:true},
+  {a:"⭐⭐⭐\nAssertion (A): Biomagnification DDT के साथ होता है।\nReason (R): DDT non-biodegradable और fat-soluble है।",opts:["A) Both गलत","B) A सही, R गलत","C) A गलत, R सही","D) A सही, R सही, R explains A"],ans:3,hot:true},
+  {a:"Assertion (A): Pyrolysis में oxygen की आवश्यकता होती है।\nReason (R): Pyrolysis एक thermal decomposition process है।",opts:["A) A सही, R सही","B) A गलत, R सही (Pyrolysis without O₂)","C) A सही, R गलत","D) Both गलत"],ans:1,hot:false},
+  {a:"Assertion (A): Composting एक aerobic process है।\nReason (R): Composting में microbes organic matter को decompose करते हैं।",opts:["A) A सही, R सही, R explains A","B) A गलत, R सही","C) A सही, R गलत","D) Both गलत"],ans:0,hot:false},
+  {a:"⭐⭐⭐\nAssertion (A): K-strategists की population stable रहती है।\nReason (R): K-strategists carrying capacity (K) के पास रहते हैं।",opts:["A) A गलत, R गलत","B) A सही, R गलत","C) A गलत, R सही","D) A सही, R सही, R explains A"],ans:3,hot:true},
+  {a:"Assertion (A): Sanitary landfill open dumping से better है।\nReason (R): Sanitary landfill में leachate और gas collection systems होते हैं।",opts:["A) A सही, R सही, R explains A","B) A गलत, R सही","C) A सही, R गलत","D) Both गलत"],ans:0,hot:false},
+  {a:"⭐⭐⭐\nAssertion (A): Greenhouse effect के बिना पृथ्वी -18°C होती।\nReason (R): Greenhouse gases solar radiation को trap करती हैं।",opts:["A) A सही, R गलत","B) A गलत, R सही","C) A सही, R सही, R explains A","D) Both गलत"],ans:2,hot:true},
+  {a:"Assertion (A): Mutualism में दोनों species को benefit होता है।\nReason (R): Lichens में algae photosynthesis करता है और fungi water+minerals देता है।",opts:["A) A सही, R सही, R is example of A","B) A सही, R गलत","C) A गलत, R सही","D) Both गलत"],ans:0,hot:false},
+  {a:"⭐⭐⭐\nAssertion (A): NPP हमेशा GPP से कम होती है।\nReason (R): Respiration में energy खर्च होती है, NPP = GPP – R।",opts:["A) A गलत, R गलत","B) A सही, R गलत","C) A गलत, R सही","D) A सही, R सही, R explains A"],ans:3,hot:true},
+  {a:"Assertion (A): Pioneer species bare rock पर सबसे पहले colonize करती है।\nReason (R): Pioneer species harsh environment को tolerate कर सकती है।",opts:["A) A सही, R सही, R explains A","B) A गलत, R सही","C) A सही, R गलत","D) Both गलत"],ans:0,hot:false},
+  {a:"⭐⭐⭐\nAssertion (A): Pyramid of energy हमेशा upright होता है।\nReason (R): Energy हमेशा एक direction में flow करती है और प्रत्येक level पर कम होती है।",opts:["A) Both गलत","B) A सही, R गलत","C) A गलत, R सही","D) A सही, R सही, R explains A"],ans:3,hot:true},
+  {a:"Assertion (A): UNEP की स्थापना 1972 में Stockholm Conference में हुई।\nReason (R): UNEP का headquarters Geneva में है।",opts:["A) A सही, R सही","B) A सही, R गलत (HQ: Nairobi, Kenya)","C) A गलत, R सही","D) Both गलत"],ans:1,hot:false},
+  {a:"⭐⭐⭐\nAssertion (A): NGT चेयरपर्सन एक retired Supreme Court judge होते हैं।\nReason (R): NGT की स्थापना 2010 में हुई।",opts:["A) A सही, R सही, R explains A","B) A सही, R सही but R does not explain A","C) A गलत, R सही","D) Both गलत"],ans:1,hot:true},
+  {a:"Assertion (A): Logistic growth में population K पर stabilize होती है।\nReason (R): Logistic growth में intraspecific competition होती है।",opts:["A) A गलत, R गलत","B) A सही, R गलत","C) A गलत, R सही","D) A सही, R सही, R explains A"],ans:3,hot:false}
+];
+
+var matchData=[
+  {title:"⭐⭐⭐ Match: Diseases & Pollutants",col1:["1. Minamata disease","2. Itai-Itai disease","3. Black lung disease","4. Fluorosis"],col2:["A. Cadmium (Cd)","B. Mercury (Hg)","C. Coal dust","D. Fluoride (F)"],ans:"1–B | 2–A | 3–C | 4–D"},
+  {title:"⭐⭐⭐ Match: Ecological Interactions",col1:["1. Mutualism","2. Commensalism","3. Parasitism","4. Amensalism"],col2:["A. (+/+) Both benefit","B. (+/0) One benefits, other neutral","C. (+/−) One benefits, other harmed","D. (0/−) One harmed, other neutral"],ans:"1–A | 2–B | 3–C | 4–D"},
+  {title:"⭐⭐⭐ Match: Adaptation Types",col1:["1. Fossorial","2. Volant","3. Cursorial","4. Arboreal"],col2:["A. Flying (Bat)","B. Tree-dwelling (Monkey)","C. Burrowing (Mole)","D. Running (Cheetah)"],ans:"1–C | 2–A | 3–D | 4–B"},
+  {title:"⭐⭐⭐ Match: Acts & Years",col1:["1. EPA (India)","2. NGT Act","3. Water Pollution Act","4. Wildlife Protection Act"],col2:["A. 1972","B. 1974","C. 1986","D. 2010"],ans:"1–C | 2–D | 3–B | 4–A"},
+  {title:"⭐⭐⭐ Match: Waste Management Methods",col1:["1. Sanitary Landfill","2. Incineration","3. Composting","4. Pyrolysis"],col2:["A. Thermal decomp. without O₂","B. Aerobic biological decomposition","C. Burning at 900–1200°C","D. Compaction & layered burial"],ans:"1–D | 2–C | 3–B | 4–A"},
+  {title:"⭐⭐⭐ Match: Scientists & Contributions",col1:["1. Ernst Haeckel","2. A.G. Tansley","3. Lindeman","4. Gause"],col2:["A. 10% Energy Law","B. Competitive Exclusion Principle","C. Coined 'Ecology'","D. Coined 'Ecosystem'"],ans:"1–C | 2–D | 3–A | 4–B"},
+  {title:"⭐⭐⭐ Match: Conventions & Topics",col1:["1. Montreal Protocol","2. Kyoto Protocol","3. Ramsar Convention","4. CITES"],col2:["A. Wetlands conservation","B. Trade in endangered species","C. Ozone layer protection","D. GHG emission reduction"],ans:"1–C | 2–D | 3–A | 4–B"},
+  {title:"Match: Biogeochemical Cycles & Organisms",col1:["1. Nitrogen fixation","2. Denitrification","3. Nitrification","4. Carbon fixation"],col2:["A. Green plants (photosynthesis)","B. Pseudomonas","C. Rhizobium","D. Nitrosomonas/Nitrobacter"],ans:"1–C | 2–B | 3–D | 4–A"},
+  {title:"⭐⭐⭐ Match: Greenhouse Gases & Sources",col1:["1. CO₂ (Major GHG)","2. CFCs","3. CH₄","4. N₂O"],col2:["A. Fertilizers & agriculture","B. Burning fossil fuels","C. Refrigerants, ACs","D. Cattle, paddy fields"],ans:"1–B | 2–C | 3–D | 4–A"},
+  {title:"⭐⭐⭐ Match: Ecological Terms",col1:["1. Pioneer community","2. Climax community","3. Sere","4. Hydrosere"],col2:["A. Succession in aquatic habitat","B. Complete sequence of communities","C. Final stable community","D. First colonizer community"],ans:"1–D | 2–C | 3–B | 4–A"},
+  {title:"Match: Pollution Types & Effects",col1:["1. Air pollution","2. Water pollution","3. Soil pollution","4. Noise pollution"],col2:["A. Pesticides & industrial waste","B. Hearing loss, stress","C. BOD increase, fish kill","D. Smog, respiratory diseases"],ans:"1–D | 2–C | 3–A | 4–B"},
+  {title:"Match: Population Parameters",col1:["1. Natality","2. Mortality","3. Carrying capacity","4. Biotic potential"],col2:["A. Maximum possible growth rate","B. K","C. Death rate","D. Birth rate"],ans:"1–D | 2–C | 3–B | 4–A"},
+  {title:"⭐⭐⭐ Match: Environmental Laws & Purpose",col1:["1. EPA 1986","2. NGT 2010","3. Forest Conservation Act","4. Air Act 1981"],col2:["A. Prevent air pollution","B. Forest diversion permission","C. Environmental tribunals","D. Umbrella environmental law"],ans:"1–D | 2–C | 3–B | 4–A"},
+  {title:"Match: Ecological Pyramids",col1:["1. Pyramid of numbers (grassland)","2. Pyramid of biomass (freshwater)","3. Pyramid of energy","4. Pyramid of numbers (tree ecosystem)"],col2:["A. Always upright","B. Inverted","C. Upright","D. Always inverted"],ans:"1–C | 2–B | 3–A | 4–D"},
+  {title:"⭐⭐⭐ Match: Summits & Years",col1:["1. Stockholm Conference","2. Rio Earth Summit","3. Kyoto Protocol","4. Paris Agreement"],col2:["A. 2015","B. 1972","C. 1997","D. 1992"],ans:"1–B | 2–D | 3–C | 4–A"},
+  {title:"Match: Trophic Levels",col1:["1. Trophic level 1","2. Trophic level 2","3. Trophic level 3","4. Trophic level 4"],col2:["A. Secondary consumer","B. Tertiary consumer","C. Primary consumer (Herbivore)","D. Producers (Plants)"],ans:"1–D | 2–C | 3–A | 4–B"},
+  {title:"Match: Food Chain Types",col1:["1. Grazing food chain","2. Detritus food chain","3. Parasitic food chain","4. Predatory food chain"],col2:["A. Large to small organism","B. Dead organic matter → decomposers","C. Small to large organism","D. Green plants → herbivores → carnivores"],ans:"1–D | 2–B | 3–A | 4–C"},
+  {title:"⭐⭐⭐ Match: r & K Strategists Examples",col1:["1. Elephant","2. Mosquito","3. Whale","4. Bacteria"],col2:["A. r-strategist (very high reprod.)","B. K-strategist (large, long life)","C. r-strategist (short life)","D. K-strategist (long gestation)"],ans:"1–B | 2–C | 3–D | 4–A"},
+  {title:"Match: Carbon Cycle Reservoirs",col1:["1. Largest C reservoir","2. Atmosphere","3. Terrestrial biosphere","4. Freshwater"],col2:["A. Smallest reservoir","B. Forests & soil","C. CO₂ pool","D. Oceans"],ans:"1–D | 2–C | 3–B | 4–A"},
+  {title:"⭐⭐⭐ Match: Conventions & Years",col1:["1. Ramsar Convention","2. CITES","3. Montreal Protocol","4. CBD"],col2:["A. 1992","B. 1987","C. 1973","D. 1971"],ans:"1–D | 2–C | 3–B | 4–A"}
+];
+
+var revisionPoints=[
+  "⭐⭐⭐ Ernst Haeckel ने 1866 में 'Ecology' शब्द दिया।",
+  "⭐⭐⭐ A.G. Tansley ने 1935 में 'Ecosystem' शब्द दिया।",
+  "⭐⭐⭐ Lindeman's 10% Law: एक trophic level से दूसरे में केवल 10% energy transfer होती है।",
+  "⭐⭐⭐ NPP = GPP – Respiration (R)",
+  "⭐⭐⭐ Logistic growth: dN/dt = rN(K–N/K) | 'K' = Carrying capacity",
+  "⭐⭐⭐ Mutualism (+/+) | Commensalism (+/0) | Parasitism (+/−) | Amensalism (0/−)",
+  "⭐⭐⭐ Pioneer species सबसे पहले bare substrate (नंगी जमीन/चट्टान) पर colonize करती है।",
+  "⭐⭐⭐ r-strategists: High birth rate, small body, short lifespan (insects, bacteria, weeds)",
+  "⭐⭐⭐ K-strategists: Low birth rate, large body, long life, high parental care (elephants, whales)",
+  "⭐ Fossorial = burrowing (Mole) | Cursorial = running (Cheetah) | Volant = flying (Bat) | Arboreal = tree (Monkey)",
+  "⭐⭐⭐ Acid rain: pH < 5.6, SO₂ + NOx → H₂SO₄ + HNO₃",
+  "⭐⭐⭐ Montreal Protocol (1987): CFCs पर ban – Ozone protection के लिए।",
+  "⭐⭐⭐ Ozone hole: Antarctica में discovered, CFCs से ozone destroy होती है।",
+  "⭐⭐⭐ Minamata Disease → Mercury (Hg) | Itai-Itai → Cadmium (Cd) | Bhopal → MIC gas",
+  "⭐ BOD (Biochemical Oxygen Demand) – high BOD = more water pollution",
+  "⭐⭐⭐ Biomagnification: DDT, Mercury जैसे toxins higher trophic levels पर concentrate होते हैं।",
+  "⭐⭐⭐ Carbon footprint = Total CO₂ equivalent emissions by individual/organization",
+  "⭐⭐⭐ Ecological footprint = Natural resources consumed vs Earth's regenerative capacity",
+  "⭐⭐⭐ Environment Protection Act 1986 = India की umbrella environmental legislation",
+  "⭐⭐⭐ NGT Act 2010 – Environmental disputes tribunal, Chairperson = Retired SC Judge",
+  "⭐⭐⭐ UNEP = 1972, Stockholm Conference, HQ: Nairobi, Kenya",
+  "⭐⭐⭐ Kyoto Protocol (1997) – Developed nations को GHG emissions कम करने की binding targets।",
+  "⭐⭐⭐ Paris Agreement (2015) – Global warming को 1.5–2°C से नीचे रखने का लक्ष्य।",
+  "⭐⭐⭐ Rio Earth Summit 1992 – Agenda 21, CBD, UNFCCC सभी यहाँ sign हुए।",
+  "⭐⭐⭐ Sanitary Landfill: waste को compact करके soil से cover करना, leachate liner।",
+  "⭐⭐⭐ Incineration: 900–1200°C पर burning, waste volume 90% कम होता है।",
+  "⭐ Composting: Aerobic decomposition → Humus (organic waste से)",
+  "⭐⭐⭐ Pyrolysis: WITHOUT oxygen, high temp → fuel gas + oil + char",
+  "⭐⭐⭐ Gause's Competitive Exclusion Principle: दो species identical niche में coexist नहीं कर सकती।",
+  "⭐⭐⭐ Realized niche ≤ Fundamental niche (interspecific competition के कारण)",
+  "⭐ Eutrophication: Excess N & P → Algal bloom → O₂ depletion → Fish kill",
+  "⭐ DDT: Non-biodegradable, fat-soluble → Biomagnification",
+  "⭐ Rhizobium: Legume roots में N₂ fixation | Pseudomonas: Denitrification",
+  "⭐ Dobson Unit: Ozone layer की thickness measure करने की unit",
+  "⭐⭐⭐ Greenhouse gases (by GWP): CFCs > N₂O > CH₄ > CO₂ (but CO₂ most abundant)",
+  "⭐ Pyramid of Energy हमेशा upright होता है – exception नहीं।",
+  "⭐ Primary succession: Bare rock (Lithosere) या water (Hydrosere) पर शुरू होती है।",
+  "⭐ Secondary succession: पहले से disturbed area जहाँ soil मौजूद हो।",
+  "⭐⭐⭐ Ramsar Convention (1971): Wetlands conservation | CITES (1973): Endangered species trade",
+  "⭐ Brundtland Report 1987 'Our Common Future': Sustainable development की definition",
+  "⭐⭐⭐ 3R's: Reduce → Reuse → Recycle (waste management hierarchy)",
+  "⭐ Water Act 1974 | Air Act 1981 | EPA 1986 – major Indian pollution laws",
+  "⭐ CPCB = Central Pollution Control Board | SPCB = State Pollution Control Board",
+  "⭐ Photochemical smog: Ozone + PAN (Peroxy Acetyl Nitrate) – UV + NOx से बनता है",
+  "⭐⭐⭐ Western Ghats & Eastern Himalayas = India's two biodiversity hotspots",
+  "⭐ Agro-ecosystem में short food chains होती हैं, single crop dominant",
+  "⭐ Desert animals: Nocturnal, concentrated urine, fat storage (camel hump = fat, not water)",
+  "⭐ Hydrophytes में aerenchyma tissue होता है – buoyancy और gas exchange के लिए",
+  "⭐ Charles Elton ने ecological pyramid का concept दिया।",
+  "⭐⭐⭐ Lichens = pollution bioindicators (SO₂ के प्रति sensitive)"
+];
+
+var expectedQs=[
+  "⭐⭐⭐ Ecology की परिभाषा दीजिए और ecological hierarchy को explain करें।",
+  "⭐⭐⭐ Lindeman का 10% energy law क्या है? Ecosystem में energy flow का वर्णन करें।",
+  "⭐⭐⭐ r-strategy और K-strategy में अंतर बताइए। उदाहरण सहित।",
+  "⭐⭐⭐ Ecological succession क्या है? Primary और Secondary succession में अंतर बताइए।",
+  "⭐⭐⭐ Greenhouse effect के कारण, परिणाम और नियंत्रण के उपाय लिखिए।",
+  "⭐⭐⭐ Ozone depletion के कारण, परिणाम और Montreal Protocol की भूमिका explain करें।",
+  "⭐⭐⭐ Acid rain कैसे बनती है? इसके पर्यावरणीय प्रभाव लिखिए।",
+  "⭐⭐⭐ Environment Protection Act 1986 की मुख्य विशेषताएं और महत्व लिखिए।",
+  "⭐⭐⭐ National Green Tribunal (NGT) Act 2010 क्या है? इसके कार्य और महत्व बताइए।",
+  "⭐⭐⭐ Sanitary Landfill, Composting, Incineration और Pyrolysis में तुलना कीजिए।",
+  "⭐⭐⭐ Ecological niche क्या है? Fundamental niche और Realized niche में अंतर।",
+  "⭐⭐⭐ Inter-specific interactions के प्रकार – उदाहरण सहित वर्णन करें।",
+  "⭐⭐⭐ Biomagnification क्या है? DDT का उदाहरण देकर explain करें।",
+  "⭐⭐⭐ Carbon cycle और Nitrogen cycle का विस्तार से वर्णन करें।",
+  "⭐⭐⭐ Population growth curves (J-shaped और S-shaped) explain करें। Logistic equation लिखिए।",
+  "⭐⭐⭐ Ecological adaptations: Fossorial, Cursorial, Volant, Arboreal, Aquatic, Desert।",
+  "⭐⭐⭐ UNEP की स्थापना और कार्य। Stockholm Conference 1972 का महत्व।",
+  "⭐⭐⭐ Rio Summit 1992, Kyoto Protocol 1997 और Paris Agreement 2015 के बारे में लिखिए।",
+  "⭐⭐⭐ Ecological footprint और Carbon footprint में अंतर। Carbon footprint कम करने के उपाय।",
+  "⭐⭐⭐ Water pollution के indicators – BOD, COD, DO को explain करें।",
+  "⭐⭐⭐ Minamata disease और Itai-Itai disease – कारण, लक्षण और प्रभाव।",
+  "⭐⭐⭐ Ecosystem के structural components (Biotic + Abiotic) explain करें।",
+  "⭐⭐⭐ Competitive exclusion principle (Gause's principle) क्या है? उदाहरण दीजिए।",
+  "⭐⭐⭐ Environmental monitoring के तरीके और महत्व बताइए।",
+  "⭐⭐⭐ Waste management की 3R strategy और sustainable development का concept।"
+];
+
+function renderQ(data,containerId,startNum){
+  var c=document.getElementById(containerId),html='';
+  data.forEach(function(q,i){
+    var n=startNum+i;
+    var cls=q.hot?'q-num hot':'q-num normal';
+    html+='<div class="q-card" id="qc'+n+'">';
+    html+='<div class="q-header"><span class="'+cls+'">Q'+n+'</span><div class="q-text">'+q.q+'</div></div>';
+    html+='<div class="options">';
+    q.opts.forEach(function(o,j){
+      html+='<div class="opt" id="o'+n+'x'+j+'" onclick="pick('+n+','+j+','+q.ans+')">'+o+'</div>';
+    });
+    html+='</div>';
+    html+='<div id="ar'+n+'" class="answer-reveal">✅ Correct: '+q.opts[q.ans]+'</div>';
+    html+='<button class="show-ans-btn" onclick="revealAns('+n+')">Show Answer</button></div>';
+  });
+  c.innerHTML=html;
+}
+
+function pick(n,j,ans){
+  if(answered['q'+n])return;
+  answered['q'+n]=true;
+  scoreTotal++;
+  for(var k=0;k<4;k++){var el=document.getElementById('o'+n+'x'+k);if(el)el.classList.add('disabled');}
+  var chosen=document.getElementById('o'+n+'x'+j);
+  if(j===ans){scoreCorrect++;chosen.classList.add('correct');}
+  else{chosen.classList.add('wrong');var ce=document.getElementById('o'+n+'x'+ans);if(ce)ce.classList.add('correct');}
+  revealAns(n);
+  updateScore();
+}
+
+function revealAns(n){var el=document.getElementById('ar'+n);if(el)el.style.display='block';}
+function updateScore(){
+  document.getElementById('score-display').textContent=scoreCorrect+'/'+scoreTotal;
+  document.getElementById('score-num').textContent=scoreCorrect;
+  document.getElementById('total-num').textContent=scoreTotal;
+}
+
+function renderAR(){
+  var c=document.getElementById('ar-questions'),html='';
+  arData.forEach(function(q,i){
+    var n=200+i;
+    html+='<div class="ar-card"><span class="ar-label">A-R Q'+(i+1)+(q.hot?' ⭐⭐⭐':'')+'</span>';
+    html+='<div class="ar-statement">'+q.a+'</div>';
+    html+='<div class="ar-options">';
+    q.opts.forEach(function(o,j){
+      html+='<div class="opt" id="o'+n+'x'+j+'" onclick="pick('+n+','+j+','+q.ans+')">'+o+'</div>';
+    });
+    html+='</div>';
+    html+='<div id="ar'+n+'" class="answer-reveal">✅ Answer: '+q.opts[q.ans]+'</div>';
+    html+='<button class="show-ans-btn" onclick="revealAns('+n+')">Show Answer</button></div>';
+  });
+  c.innerHTML=html;
+}
+
+function renderMatch(){
+  var c=document.getElementById('match-questions'),html='';
+  matchData.forEach(function(m,i){
+    html+='<div class="ar-card"><span class="ar-label">Match '+(i+1)+'</span>';
+    html+='<div style="font-size:clamp(13px,3.5vw,14px);font-weight:600;margin:6px 0 10px;color:#085041">'+m.title+'</div>';
+    html+='<div style="overflow-x:auto;-webkit-overflow-scrolling:touch"><table class="match-table"><tr><th>Column A</th><th>Column B</th></tr>';
+    var ml=Math.max(m.col1.length,m.col2.length);
+    for(var j=0;j<ml;j++)html+='<tr><td>'+(m.col1[j]||'')+'</td><td>'+(m.col2[j]||'')+'</td></tr>';
+    html+='</table></div>';
+    html+='<div id="ma'+i+'" class="answer-reveal" style="margin-top:8px">✅ Answer: '+m.ans+'</div>';
+    html+='<button class="show-ans-btn" onclick="document.getElementById(\'ma'+i+'\').style.display=\'block\'">Show Answer</button></div>';
+  });
+  c.innerHTML=html;
+}
+
+function renderRevision(){
+  var c=document.getElementById('revision-points'),html='';
+  revisionPoints.forEach(function(p,i){
+    html+='<div class="revision-item"><strong>'+(i+1)+'.</strong> '+p+'</div>';
+  });
+  c.innerHTML=html;
+}
+
+function renderExpected(){
+  var c=document.getElementById('expected-qs'),html='';
+  expectedQs.forEach(function(q,i){
+    html+='<div class="expected-q"><strong>'+(i+1)+'.</strong> '+q+'</div>';
+  });
+  c.innerHTML=html;
+}
+
+function showTab(id){
+  document.querySelectorAll('.section').forEach(function(s){s.classList.remove('active');});
+  document.getElementById(id).classList.add('active');
+}
+
+function showTabBtn(id,btn){
+  showTab(id);
+  document.querySelectorAll('.tab').forEach(function(t){t.classList.remove('active');});
+  btn.classList.add('active');
+}
+
+renderQ(u1,'unit1-questions',1);
+renderQ(u2,'unit2-questions',26);
+renderQ(u3,'unit3-questions',51);
+renderQ(u4,'unit4-questions',76);
+renderAR();
+renderMatch();
+renderRevision();
+renderExpected();
+</script>
+</body>
+</html>
